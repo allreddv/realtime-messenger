@@ -99,7 +99,6 @@ interface pageProps {}
 const Page: FC<pageProps> = ({}) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const { data: session } = useSession();
-  console.log(session);
 
   async function loginWithGoogle() {
     setIsLoading(true);

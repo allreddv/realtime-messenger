@@ -40,16 +40,12 @@ export const authOptions: NextAuthOptions = {
         | string
         | null;
 
-      console.log(dbUserResult);
-
       if (!dbUserResult) {
         token.id = user!.id;
         return token;
       }
 
       const dbUser = JSON.parse(dbUserResult) as User;
-
-      console.log(dbUser);
 
       return {
         id: dbUser.id,
